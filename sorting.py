@@ -127,8 +127,8 @@ def quick_sorted(xs, cmp=cmp_standard):
     Quicksort is like mergesort,
     but it uses a different strategy to split the list.
     Instead of splitting the list down the middle,
-    a "pivot" value is randomly selected, 
-    and the list is split into a "less than" sublist and a "greater 
+    a "pivot" value is randomly selected,
+    and the list is split into a "less than" sublist and a "greater
     than" sublist.
 
     The pseudocode is:
