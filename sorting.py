@@ -10,7 +10,6 @@ if cmp(a, b) returns  1, then a > b;
 if cmp(a, b) returns  0, then a == b.
 '''
 
-import random
 
 def cmp_standard(a, b):
     '''
@@ -115,7 +114,7 @@ def merge_sorted(xs, cmp=cmp_standard):
     if len(xs) <= 1:
         return xs
     else:
-        mid =  len(xs) // 2
+        mid = len(xs) // 2
         left = xs[mid:]
         right = xs[:mid]
         left_sorted = merge_sorted(left, cmp=cmp)
@@ -129,7 +128,8 @@ def quick_sorted(xs, cmp=cmp_standard):
     but it uses a different strategy to split the list.
     Instead of splitting the list down the middle,
     a "pivot" value is randomly selected, 
-    and the list is split into a "less than" sublist and a "greater than" sublist.
+    and the list is split into a "less than" sublist and a "greater 
+    than" sublist.
 
     The pseudocode is:
 
@@ -157,6 +157,7 @@ def quick_sorted(xs, cmp=cmp_standard):
         xs_lt = quick_sorted(xs_lt, cmp=cmp)
         xs_gt = quick_sorted(xs_gt, cmp=cmp)
         return xs_lt + xs_eq + xs_gt
+
 
 def quick_sort(xs, cmp=cmp_standard):
     '''
